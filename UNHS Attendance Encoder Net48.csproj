@@ -61,12 +61,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthenticatedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller Services\LoginFormController.cs" />
+    <Compile Include="Controller Services\UserAuth.cs" />
+    <Compile Include="CustomControls\IconButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ImageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ImageButton.Designer.cs">
+      <DependentUpon>ImageButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data Containers\LoginCarouselData.cs" />
+    <Compile Include="Data Containers\StatusCodes.cs" />
+    <Compile Include="Data Containers\UserCredentials.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainEditor.Designer.cs">
+      <DependentUpon>MainEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="MasterForm.cs">
       <SubType>Form</SubType>
@@ -78,6 +100,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainEditor.resx">
+      <DependentUpon>MainEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,8 +136,17 @@
     <Content Include="Assets\Images\icn_login_carousel_0.png" />
     <Content Include="Assets\Images\icn_login_carousel_1.png" />
     <Content Include="Assets\Images\icn_login_carousel_2.png" />
+    <None Include="Assets\Images\window_control_minimize_hover.png" />
+    <None Include="Assets\Images\window_control_minimize_active.png" />
+    <None Include="Assets\Images\window_control_close_hover.png" />
+    <None Include="Assets\Images\window_control_close_active.png" />
+    <None Include="Assets\Images\image_button_default_active.png" />
+    <EmbeddedResource Include="Assets\Images\image_button_default_hover.png" />
+    <EmbeddedResource Include="Assets\Images\image_button_default_bg.png" />
     <Content Include="Assets\Images\input_field_bg_login.png" />
     <Content Include="Assets\Images\scrollspy_login_2.png" />
+    <Content Include="Assets\Images\window_control_close.png" />
+    <Content Include="Assets\Images\window_control_minimize.png" />
     <None Include="Assets\Images\scrollspy_login_3.png" />
     <None Include="Assets\Images\scrollspy_login_1.png" />
     <None Include="Assets\Images\scrollspy_login_0.png" />
@@ -123,12 +157,9 @@
     <None Include="Assets\Images\icn_password.png" />
     <None Include="Assets\Images\icn_user.png" />
     <Content Include="Assets\Images\main-background.png" />
-    <None Include="Resources\icn_login_close_hover.png" />
-    <None Include="Resources\icn_login_close_active.png" />
-    <None Include="Resources\icn_login_close1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controller Services\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

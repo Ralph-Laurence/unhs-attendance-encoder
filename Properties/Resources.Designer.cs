@@ -183,6 +183,36 @@ namespace UNHS_Attendance_Encoder_Net48.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image_button_default_active {
+            get {
+                object obj = ResourceManager.GetObject("image_button_default_active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image_button_default_bg {
+            get {
+                object obj = ResourceManager.GetObject("image_button_default_bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image_button_default_hover {
+            get {
+                object obj = ResourceManager.GetObject("image_button_default_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap input_field_bg_login {
             get {
                 object obj = ResourceManager.GetObject("input_field_bg_login", resourceCulture);
@@ -216,6 +246,66 @@ namespace UNHS_Attendance_Encoder_Net48.Properties {
         internal static System.Drawing.Bitmap scrollspy_login_2 {
             get {
                 object obj = ResourceManager.GetObject("scrollspy_login_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap window_control_close {
+            get {
+                object obj = ResourceManager.GetObject("window_control_close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap window_control_close_active {
+            get {
+                object obj = ResourceManager.GetObject("window_control_close_active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap window_control_close_hover {
+            get {
+                object obj = ResourceManager.GetObject("window_control_close_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap window_control_minimize {
+            get {
+                object obj = ResourceManager.GetObject("window_control_minimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap window_control_minimize_active {
+            get {
+                object obj = ResourceManager.GetObject("window_control_minimize_active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap window_control_minimize_hover {
+            get {
+                object obj = ResourceManager.GetObject("window_control_minimize_hover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

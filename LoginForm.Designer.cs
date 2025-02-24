@@ -75,7 +75,7 @@ namespace UNHS_Attendance_Encoder_Net48
             this.InputUsernameIcon = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.LoginH3 = new System.Windows.Forms.Label();
             this.BtnIcnExit = new System.Windows.Forms.PictureBox();
             this.Timer1 = new System.Windows.Forms.Timer(this.components);
             this.ContainerPanel.SuspendLayout();
@@ -221,7 +221,7 @@ namespace UNHS_Attendance_Encoder_Net48
             this.LoginPanelInputsWrapper.Controls.Add(this.InputUsernameOutline);
             this.LoginPanelInputsWrapper.Controls.Add(this.label4);
             this.LoginPanelInputsWrapper.Controls.Add(this.label3);
-            this.LoginPanelInputsWrapper.Controls.Add(this.label2);
+            this.LoginPanelInputsWrapper.Controls.Add(this.LoginH3);
             this.LoginPanelInputsWrapper.Location = new System.Drawing.Point(12, 50);
             this.LoginPanelInputsWrapper.Name = "LoginPanelInputsWrapper";
             this.LoginPanelInputsWrapper.Padding = new System.Windows.Forms.Padding(8, 32, 8, 8);
@@ -246,6 +246,7 @@ namespace UNHS_Attendance_Encoder_Net48
             this.BtnLogin.BackColor = System.Drawing.Color.Transparent;
             this.BtnLogin.BackgroundImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.btn_bg_login;
             this.BtnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnLogin.Enabled = false;
             this.BtnLogin.FlatAppearance.BorderSize = 0;
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogin.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -297,6 +298,7 @@ namespace UNHS_Attendance_Encoder_Net48
             this.InputPassword.PasswordChar = '●';
             this.InputPassword.Size = new System.Drawing.Size(288, 14);
             this.InputPassword.TabIndex = 6;
+            this.InputPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.InputLoginField_KeyUp);
             // 
             // InputPasswordIcon
             // 
@@ -359,6 +361,7 @@ namespace UNHS_Attendance_Encoder_Net48
             this.InputUsername.Name = "InputUsername";
             this.InputUsername.Size = new System.Drawing.Size(288, 20);
             this.InputUsername.TabIndex = 6;
+            this.InputUsername.KeyUp += new System.Windows.Forms.KeyEventHandler(this.InputLoginField_KeyUp);
             // 
             // InputUsernameIcon
             // 
@@ -398,17 +401,17 @@ namespace UNHS_Attendance_Encoder_Net48
             this.label3.TabIndex = 4;
             this.label3.Text = "Please login to your account to use the system.";
             // 
-            // label2
+            // LoginH3
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Poppins SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(8, 32);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(336, 34);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "User Login";
+            this.LoginH3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LoginH3.Font = new System.Drawing.Font("Poppins SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginH3.ForeColor = System.Drawing.Color.White;
+            this.LoginH3.Location = new System.Drawing.Point(8, 32);
+            this.LoginH3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LoginH3.Name = "LoginH3";
+            this.LoginH3.Size = new System.Drawing.Size(336, 34);
+            this.LoginH3.TabIndex = 3;
+            this.LoginH3.Text = "User Login";
             // 
             // BtnIcnExit
             // 
@@ -475,7 +478,7 @@ namespace UNHS_Attendance_Encoder_Net48
         private PictureBox BtnIcnExit;
         private Label label1;
         private Panel LoginPanelInputsWrapper;
-        private Label label2;
+        private Label LoginH3;
         private Label label3;
         private TextBox InputUsername;
         private Label label4;

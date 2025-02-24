@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using UNHS_Attendance_Encoder_Net48.Controller_Services;
 using UNHS_Attendance_Encoder_Net48.Data_Containers;
 
 namespace UNHS_Attendance_Encoder_Net48
@@ -15,11 +11,15 @@ namespace UNHS_Attendance_Encoder_Net48
     public partial class LoginForm : MasterForm
     {
         private readonly List<LoginCarouselData> m_carouselContent;
+        private readonly LoginFormController controller;
         private Image[] scrollSpyImages;
         private int m_carouselIndex = 0;
-
+        private int controllerStatus = -1;
+        
         public LoginForm()
         {
+            controller = new LoginFormController();
+
             scrollSpyImages = new Image[3]
             {
                 Properties.Resources.scrollspy_login_0,
@@ -35,12 +35,24 @@ namespace UNHS_Attendance_Encoder_Net48
             };
 
             InitializeComponent();
+
+            controllerStatus = controller.Begin();
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
             var version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
             LblVersionString.Text = $"Version {version} alpha";
+
+            if (controllerStatus == StatusCodes.ERROR_ACCESS_DENIED)
+            {
+                MessageBox.Show("The current directory is not accessible. Please move this app to an accessible location.",
+                                    "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+            }
+
+            BtnLogin.Enabled = true;
         }
 
         private void BtnIcnExit_Click(object sender, EventArgs e)
@@ -63,11 +75,6 @@ namespace UNHS_Attendance_Encoder_Net48
             BtnIcnExit.Image = Properties.Resources.icn_login_close_active;
         }
 
-        private void BtnLogin_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void BtnLogin_MouseEnter(object sender, EventArgs e)
         {
             BtnLogin.BackgroundImage = Properties.Resources.btn_bg_login_hover;
@@ -81,6 +88,32 @@ namespace UNHS_Attendance_Encoder_Net48
         private void BtnLogin_MouseDown(object sender, MouseEventArgs e)
         {
             BtnLogin.BackgroundImage = Properties.Resources.btn_bg_login_active;
+        }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            RequestLogin();
+        }
+
+        private void InputLoginField_KeyUp(object sender, KeyEventArgs e)
+        {
+            var hasFocus = InputUsername.Focused || InputPassword.Focused;
+
+            if (hasFocus && e.KeyCode == Keys.Enter)
+            {
+                RequestLogin();
+
+                // Bring the focus again on title text
+                ActiveControl = LoginH3;
+            }
+        }
+
+        private void RequestLogin()
+        {
+            var login = controller.Login(InputUsername.Text, InputPassword.Text);
+
+            if (login)
+                Hide();
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
