@@ -203,6 +203,16 @@ namespace UNHS_Attendance_Encoder_Net48.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image_button_default_bg_outlined {
+            get {
+                object obj = ResourceManager.GetObject("image_button_default_bg_outlined", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image_button_default_hover {
             get {
                 object obj = ResourceManager.GetObject("image_button_default_hover", resourceCulture);
@@ -216,6 +226,46 @@ namespace UNHS_Attendance_Encoder_Net48.Properties {
         internal static System.Drawing.Bitmap input_field_bg_login {
             get {
                 object obj = ResourceManager.GetObject("input_field_bg_login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap modal_icon_error {
+            get {
+                object obj = ResourceManager.GetObject("modal_icon_error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap modal_icon_info {
+            get {
+                object obj = ResourceManager.GetObject("modal_icon_info", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap modal_icon_warn {
+            get {
+                object obj = ResourceManager.GetObject("modal_icon_warn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rounded_panel_9slice {
+            get {
+                object obj = ResourceManager.GetObject("rounded_panel_9slice", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +296,96 @@ namespace UNHS_Attendance_Encoder_Net48.Properties {
         internal static System.Drawing.Bitmap scrollspy_login_2 {
             get {
                 object obj = ResourceManager.GetObject("scrollspy_login_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toolbar_icn_export {
+            get {
+                object obj = ResourceManager.GetObject("toolbar_icn_export", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toolbar_icn_help {
+            get {
+                object obj = ResourceManager.GetObject("toolbar_icn_help", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toolbar_icn_load {
+            get {
+                object obj = ResourceManager.GetObject("toolbar_icn_load", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toolbar_icn_new {
+            get {
+                object obj = ResourceManager.GetObject("toolbar_icn_new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toolbar_icn_outline {
+            get {
+                object obj = ResourceManager.GetObject("toolbar_icn_outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toolbar_icn_outline_active {
+            get {
+                object obj = ResourceManager.GetObject("toolbar_icn_outline_active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toolbar_icn_outline_hover {
+            get {
+                object obj = ResourceManager.GetObject("toolbar_icn_outline_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toolbar_icn_placeholder {
+            get {
+                object obj = ResourceManager.GetObject("toolbar_icn_placeholder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toolbar_icn_save {
+            get {
+                object obj = ResourceManager.GetObject("toolbar_icn_save", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

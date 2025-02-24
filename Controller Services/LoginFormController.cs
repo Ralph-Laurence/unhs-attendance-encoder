@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using UNHS_Attendance_Encoder_Net48.Data_Containers;
+﻿using UNHS_Attendance_Encoder_Net48.Data_Containers;
+using UNHS_Attendance_Encoder_Net48.Modals;
 
 namespace UNHS_Attendance_Encoder_Net48.Controller_Services
 {
@@ -33,13 +28,13 @@ namespace UNHS_Attendance_Encoder_Net48.Controller_Services
         {
             if (string.IsNullOrEmpty(username))
             {
-                MessageBox.Show("Please enter your username!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Alert.Warning("Please enter your username!", "Login");
                 return false;
             }
 
             if (string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Please enter your password!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Alert.Warning("Please enter your password!", "Login");
                 return false;
             }
 
@@ -47,7 +42,7 @@ namespace UNHS_Attendance_Encoder_Net48.Controller_Services
 
             if (!result)
             {
-                MessageBox.Show("Incorrect username or password! Please try again.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Alert.Danger("Incorrect username or password! Please try again.", "Login");
                 return false;
             }
 

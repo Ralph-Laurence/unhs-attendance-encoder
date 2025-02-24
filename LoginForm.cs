@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using UNHS_Attendance_Encoder_Net48.Controller_Services;
 using UNHS_Attendance_Encoder_Net48.Data_Containers;
+using UNHS_Attendance_Encoder_Net48.Modals;
 
 namespace UNHS_Attendance_Encoder_Net48
 {
@@ -46,8 +47,8 @@ namespace UNHS_Attendance_Encoder_Net48
 
             if (controllerStatus == StatusCodes.ERROR_ACCESS_DENIED)
             {
-                MessageBox.Show("The current directory is not accessible. Please move this app to an accessible location.",
-                                    "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                var message = "The current directory is not accessible. Please move this app to an accessible location.";
+                Alert.Warning(message, "Access Denied");
 
                 return;
             }

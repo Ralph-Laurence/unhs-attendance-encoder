@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UNHS_Attendance_Encoder_Net48.Modals;
 
 namespace UNHS_Attendance_Encoder_Net48
 {
@@ -15,6 +16,8 @@ namespace UNHS_Attendance_Encoder_Net48
         public MainEditor()
         {
             InitializeComponent();
+
+            Alert.Danger("Welcome!");
         }
     }
 }

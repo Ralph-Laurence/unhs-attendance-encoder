@@ -75,6 +75,12 @@
     <Compile Include="CustomControls\ImageButton.Designer.cs">
       <DependentUpon>ImageButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\RoundedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ToolbarImageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Data Containers\LoginCarouselData.cs" />
     <Compile Include="Data Containers\StatusCodes.cs" />
     <Compile Include="Data Containers\UserCredentials.cs" />
@@ -96,6 +102,13 @@
     <Compile Include="MasterForm.Designer.cs">
       <DependentUpon>MasterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modals\Alert.cs" />
+    <Compile Include="Modals\Modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modals\Modal.Designer.cs">
+      <DependentUpon>Modal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="LoginForm.resx">
@@ -103,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainEditor.resx">
       <DependentUpon>MainEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modals\Modal.resx">
+      <DependentUpon>Modal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,6 +152,21 @@
     <Content Include="Assets\Images\icn_login_carousel_0.png" />
     <Content Include="Assets\Images\icn_login_carousel_1.png" />
     <Content Include="Assets\Images\icn_login_carousel_2.png" />
+    <None Include="Assets\Images\modal_icon_warn.png" />
+    <None Include="Assets\Images\image_button_default_bg_outlined.png" />
+    <None Include="Assets\Images\modal_icon_error.png" />
+    <None Include="Assets\Images\modal_icon_fail.png" />
+    <None Include="Assets\Images\modal_icon_info.png" />
+    <None Include="Assets\Images\toolbar_icn_help.png" />
+    <None Include="Assets\Images\toolbar_icn_save.png" />
+    <None Include="Assets\Images\toolbar_icn_export.png" />
+    <None Include="Assets\Images\toolbar_icn_load.png" />
+    <None Include="Assets\Images\toolbar_icn_outline.png" />
+    <None Include="Assets\Images\toolbar_icn_outline_active.png" />
+    <None Include="Assets\Images\toolbar_icn_outline_hover.png" />
+    <None Include="Assets\Images\toolbar_icn_placeholder.png" />
+    <None Include="Assets\Images\toolbar_icn_new.png" />
+    <None Include="Assets\Images\rounded_panel_9slice.png" />
     <None Include="Assets\Images\window_control_minimize_hover.png" />
     <None Include="Assets\Images\window_control_minimize_active.png" />
     <None Include="Assets\Images\window_control_close_hover.png" />
