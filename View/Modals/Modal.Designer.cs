@@ -31,18 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Modal));
             this.WindowTitleBar = new System.Windows.Forms.Panel();
             this.LblProjectTitle = new System.Windows.Forms.Label();
-            this.ModalClose = new UNHS_Attendance_Encoder_Net48.CustomControls.IconButton();
             this.ModalTitle = new System.Windows.Forms.Label();
-            this.ModalIcon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ModalMessage = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ModalClose = new UNHS_Attendance_Encoder_Net48.CustomControls.IconButton();
+            this.ModalIcon = new System.Windows.Forms.PictureBox();
+            this.ModalCancelButton = new UNHS_Attendance_Encoder_Net48.CustomControls.ImageButton();
             this.ModalOkButton = new UNHS_Attendance_Encoder_Net48.CustomControls.ImageButton();
             this.WindowTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ModalClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ModalIcon)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ModalClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ModalIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ModalCancelButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModalOkButton)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,21 +77,6 @@
             this.LblProjectTitle.Text = "Untitled";
             this.LblProjectTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ModalClose
-            // 
-            this.ModalClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ModalClose.ClickedImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_close_active;
-            this.ModalClose.HoverImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_close_hover;
-            this.ModalClose.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_close;
-            this.ModalClose.Location = new System.Drawing.Point(271, 4);
-            this.ModalClose.Name = "ModalClose";
-            this.ModalClose.NormalImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_close;
-            this.ModalClose.Size = new System.Drawing.Size(22, 22);
-            this.ModalClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ModalClose.TabIndex = 4;
-            this.ModalClose.TabStop = false;
-            this.ModalClose.Click += new System.EventHandler(this.ModalClose_Click);
-            // 
             // ModalTitle
             // 
             this.ModalTitle.AutoSize = true;
@@ -101,16 +88,6 @@
             this.ModalTitle.Size = new System.Drawing.Size(37, 23);
             this.ModalTitle.TabIndex = 3;
             this.ModalTitle.Text = "Alert";
-            // 
-            // ModalIcon
-            // 
-            this.ModalIcon.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.modal_icon_info;
-            this.ModalIcon.Location = new System.Drawing.Point(8, 7);
-            this.ModalIcon.Name = "ModalIcon";
-            this.ModalIcon.Size = new System.Drawing.Size(18, 18);
-            this.ModalIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ModalIcon.TabIndex = 2;
-            this.ModalIcon.TabStop = false;
             // 
             // panel1
             // 
@@ -134,12 +111,56 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.panel2.Controls.Add(this.ModalCancelButton);
             this.panel2.Controls.Add(this.ModalOkButton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 116);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(290, 47);
             this.panel2.TabIndex = 3;
+            // 
+            // ModalClose
+            // 
+            this.ModalClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ModalClose.ClickedImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_close_active;
+            this.ModalClose.HoverImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_close_hover;
+            this.ModalClose.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_close;
+            this.ModalClose.Location = new System.Drawing.Point(271, 4);
+            this.ModalClose.Name = "ModalClose";
+            this.ModalClose.NormalImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_close;
+            this.ModalClose.Size = new System.Drawing.Size(22, 22);
+            this.ModalClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ModalClose.TabIndex = 4;
+            this.ModalClose.TabStop = false;
+            this.ModalClose.Click += new System.EventHandler(this.ModalClose_Click);
+            // 
+            // ModalIcon
+            // 
+            this.ModalIcon.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.modal_icon_info;
+            this.ModalIcon.Location = new System.Drawing.Point(8, 7);
+            this.ModalIcon.Name = "ModalIcon";
+            this.ModalIcon.Size = new System.Drawing.Size(18, 18);
+            this.ModalIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ModalIcon.TabIndex = 2;
+            this.ModalIcon.TabStop = false;
+            // 
+            // ModalCancelButton
+            // 
+            this.ModalCancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.ModalCancelButton.ButtonFont = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModalCancelButton.ButtonText = "Cancel";
+            this.ModalCancelButton.ClickedImage = ((System.Drawing.Image)(resources.GetObject("ModalCancelButton.ClickedImage")));
+            this.ModalCancelButton.HoverImage = ((System.Drawing.Image)(resources.GetObject("ModalCancelButton.HoverImage")));
+            this.ModalCancelButton.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.image_button_default_bg_outlined;
+            this.ModalCancelButton.Location = new System.Drawing.Point(114, 10);
+            this.ModalCancelButton.Name = "ModalCancelButton";
+            this.ModalCancelButton.NormalImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.image_button_default_bg_outlined;
+            this.ModalCancelButton.Size = new System.Drawing.Size(80, 28);
+            this.ModalCancelButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ModalCancelButton.TabIndex = 1;
+            this.ModalCancelButton.TabStop = false;
+            this.ModalCancelButton.Visible = false;
+            this.ModalCancelButton.Click += new System.EventHandler(this.ModalCancelButton_Click);
             // 
             // ModalOkButton
             // 
@@ -175,10 +196,11 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Modal_KeyUp);
             this.WindowTitleBar.ResumeLayout(false);
             this.WindowTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ModalClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ModalIcon)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ModalClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ModalIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ModalCancelButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModalOkButton)).EndInit();
             this.ResumeLayout(false);
 
@@ -195,5 +217,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label ModalMessage;
         private CustomControls.ImageButton ModalOkButton;
+        private CustomControls.ImageButton ModalCancelButton;
     }
 }

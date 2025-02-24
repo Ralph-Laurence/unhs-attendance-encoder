@@ -1,27 +1,17 @@
-﻿using UNHS_Attendance_Encoder_Net48.Data_Containers;
+﻿using System.Windows.Forms;
+using UNHS_Attendance_Encoder_Net48.Data_Containers;
 using UNHS_Attendance_Encoder_Net48.Modals;
 
 namespace UNHS_Attendance_Encoder_Net48.Controller_Services
 {
-    internal class LoginFormController
+    internal class LoginService
     {
-        // Perform checks then return a status code
-        public int Begin()
+        public Form Initiator {  get; set; }
+
+        public LoginService(Form initiator = null)
         {
-            // Make sure that there exists an authentication file
-            var check1 = UserAuth.CacheAuthFile();
-
-            if (!check1)
-                return StatusCodes.ERROR_ACCESS_DENIED;
-
-            // Allow the user to be redirected to login screen
-            var check2 = UserAuth.IsAuthenticated();
-
-            if (!check2)
-                return StatusCodes.ERROR_NOT_AUTHENTICATED;
-
-            // If all checks passed, its safe to assume that the user is authenticated
-            return StatusCodes.ACTION_SUCCESS;
+            if (initiator != null)
+                Initiator = initiator;
         }
 
         public bool Login(string username, string password)
@@ -38,7 +28,7 @@ namespace UNHS_Attendance_Encoder_Net48.Controller_Services
                 return false;
             }
 
-            var result = UserAuth.Login(username, password);
+            var result = AuthManager.Login(username, password);
 
             if (!result)
             {
@@ -48,6 +38,8 @@ namespace UNHS_Attendance_Encoder_Net48.Controller_Services
 
             var editor = new MainEditor();
             editor.Show();
+
+            Initiator.Hide();
             return true;
         }
     }

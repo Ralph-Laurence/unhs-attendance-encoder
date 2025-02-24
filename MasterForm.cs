@@ -11,29 +11,32 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UNHS_Attendance_Encoder_Net48.Data_Containers;
 
 namespace UNHS_Attendance_Encoder_Net48
 {
     public partial class MasterForm : Form
     {
-        private readonly PrivateFontCollection privateFonts;
+        protected readonly PrivateFontCollection privateFonts;
 
         public MasterForm()
         {
             privateFonts = new PrivateFontCollection();
 
             // Load the custom font
-            LoadCustomFont("Poppins-Regular.ttf");
+            LoadCustomFont(Constants.PrimaryFont);
+            LoadCustomFont(Constants.PrimaryFontMedium);
 
             // Set the default font for the application
-            this.Font = new Font(privateFonts.Families[0], 10); // Replace "10" with your desired size
+            this.Font = new Font(privateFonts.Families[Constants.PrimaryFontIndex], 10); // Replace "10" with your desired size
         }
 
-        private void LoadCustomFont(string fontFileName)
+        protected void LoadCustomFont(string fontFileName)
         {
             // Get the embedded resource stream
-            string resourceName = $"UNHS_Attendance_Encoder_Net48.Assets.Fonts.{fontFileName}";
-            using (Stream fontStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
+            var asm                  = Assembly.GetExecutingAssembly();
+            string resourceName      = $"{asm.GetName().Name}.Assets.Fonts.{fontFileName}";
+            using (Stream fontStream = asm.GetManifestResourceStream(resourceName))
             {
                 if (fontStream != null)
                 {

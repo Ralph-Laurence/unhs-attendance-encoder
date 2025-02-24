@@ -233,6 +233,16 @@ namespace UNHS_Attendance_Encoder_Net48.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap modal_icon_confirm {
+            get {
+                object obj = ResourceManager.GetObject("modal_icon_confirm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap modal_icon_error {
             get {
                 object obj = ResourceManager.GetObject("modal_icon_error", resourceCulture);

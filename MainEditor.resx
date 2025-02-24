@@ -120,16 +120,59 @@
   <metadata name="WindowTitleBar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="iconButton2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="WindowBtnClose.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="iconButton1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="WindowBtnMinimize.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="FlyoutContainer.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="panel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="roundedPanel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="EmployeeID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CreatedAt.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TimeIn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="LunchStart.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="LunchEnd.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TimeOut.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="roundedPanel2.SourceImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAmFJREFUeF7tm0tOAlEQRfGDEQfG/9816DIYkBAmhM1o1F0wANakDvwMoZs9wACt
+        i5ekyjSCQ+rVSe6kU928c6Vbke5SEPzJumRDZXOJlBdka4kU7adT9Lq/o9e9JvkXEMdCdiS7kj2VfZUD
+        5lDlSOVY5YQ5VTlT0dtns3p/fVz9erM16HXp9WL92xKUslQRkK9Uq9Wrfr9/PxqNnieTyehrBcG6sf48
+        z+8ajcY5vOg3l6l8u92+kR3feBwXwKfT6dzAj56FlGu12qU3+Rni9Q4/eP7oWtDKzmAwuOe8S7Ise4Qn
+        fQ24Wu7inOGsS8TvBZ70NWDD3qpe8JYFfvCkr2FaAOdcA0/6GvB7MqUC4GvAhn3OuAae9DVEAZLkCzjg
+        jGvgSV9DFCA55Ixr4ElfQxQgSboAfEI64oxr4ElfQxQgSb6AY864Bp70NUQBkuQLOOGMa+BJX0PyBeCL
+        kFPOuAae9DVEAZLkCzjjjGvgSV9DFCBJvoC4CHLGNfCkryH5AuJPYUnyBcTHYc64Bp70NUQBkvinKGdc
+        A0/6GpIvIL4ak0QBnHENPOlrwIa4QYIzroEnfQ3YEDdJccY18KSvIQqQJH2naPL3Ck8LSOBu8TE86WvA
+        Bjwv8MJZl4jfKzzpa5g+MZJl2QNnXZLn+dwnRkC5Xq9fjMfjD867Qrw+m83m3GeGAJ6rq3S73VsMcz8X
+        4Ifa6/Vu4UfPueCtUZF3wrWcDk84Z3Dh4HFWCqwb6x8Ohw+tVusCXvRbCIbwxUGST45qUASulrPgIIuC
+        8+uvoNhFKdpPp+h1f0ev+9/iiVAqfQPxrE3ICx37mQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="FlyoutContainer.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="roundedPanel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="roundedPanel1.SourceImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -149,21 +192,21 @@
   <data name="toolbarImageButton2.SourceImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAABGdBTUEAALGPC/xhBQAAAAZQTFRF0tLS
-        7u7uocq1dwAAAAlwSFlzAAAOwAAADsABataJCQAAACNJREFUSMdjoAIQxAtGFYwqGFUwqmBUwaiCUQWD
+        7u7uocq1dwAAAAlwSFlzAAAOvAAADrwBlbxySQAAACNJREFUSMdjoAIQxAtGFYwqGFUwqmBUwaiCUQWD
         TQFlgIEBADYjd4l7HG1XAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="toolbarImageButton1.SourceImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAABGdBTUEAALGPC/xhBQAAAAZQTFRF0tLS
-        7u7uocq1dwAAAAlwSFlzAAAOvwAADr8BOAVTJAAAACNJREFUSMdjoAIQxAtGFYwqGFUwqmBUwaiCUQWD
+        7u7uocq1dwAAAAlwSFlzAAAOvAAADrwBlbxySQAAACNJREFUSMdjoAIQxAtGFYwqGFUwqmBUwaiCUQWD
         TQFlgIEBADYjd4l7HG1XAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="toolbarBtnExport.SourceImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAABGdBTUEAALGPC/xhBQAAAAZQTFRF0tLS
-        7u7uocq1dwAAAAlwSFlzAAAOvQAADr0BR/uQrQAAACNJREFUSMdjoAIQxAtGFYwqGFUwqmBUwaiCUQWD
+        7u7uocq1dwAAAAlwSFlzAAAOvAAADrwBlbxySQAAACNJREFUSMdjoAIQxAtGFYwqGFUwqmBUwaiCUQWD
         TQFlgIEBADYjd4l7HG1XAAAAAElFTkSuQmCC
 </value>
   </data>
@@ -181,10 +224,10 @@
         TQFlgIEBADYjd4l7HG1XAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="imageButton1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="BtnLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="imageButton1.ClickedImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnLogin.ClickedImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAAAcCAYAAAD2izi6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAANZJREFUaEPt2j0OgkAYhGFKuIN6Bo5mlIt4L6Hw5y4QC50hYgS+hJUpneJpvt1t
@@ -194,7 +237,7 @@
         SUVORK5CYII=
 </value>
   </data>
-  <data name="imageButton1.HoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnLogin.HoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAAAcCAYAAAD2izi6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAANZJREFUaEPt2s0NgkAYhGGO0INaFnUYpT8bEA7+9AKJic4QMQJfwsocncNz+Xb3
@@ -204,7 +247,7 @@
         SUVORK5CYII=
 </value>
   </data>
-  <data name="imageButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnLogin.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAAAcCAYAAAD2izi6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAANRJREFUaEPt2UEOgjAUhOEu4Q7KGY1yTGGheABuASudEZooNKEyS6fJt3mFzZ8S
@@ -214,7 +257,7 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="imageButton1.NormalImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnLogin.NormalImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAAAcCAYAAAD2izi6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAANRJREFUaEPt2UEOgjAUhOEu4Q7KGY1yTGGheABuASudEZooNKEyS6fJt3mFzZ8S

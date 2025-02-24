@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using UNHS_Attendance_Encoder_Net48.Controller_Services;
 
 namespace UNHS_Attendance_Encoder_Net48
 {
@@ -16,6 +14,14 @@ namespace UNHS_Attendance_Encoder_Net48
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            // sudo => root
+            // user => 1234
+            var db = new DBHelper();
+
+            if (!db.Initialize())
+                return;
+
             Application.Run(new LoginForm());
         }
     }

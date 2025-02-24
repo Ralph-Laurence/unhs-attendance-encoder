@@ -62,22 +62,20 @@ namespace UNHS_Attendance_Encoder_Net48
             this.LoginBackgroundImage = new System.Windows.Forms.PictureBox();
             this.LoginPanel = new System.Windows.Forms.Panel();
             this.LoginPanelInputsWrapper = new System.Windows.Forms.Panel();
-            this.LblVersionString = new System.Windows.Forms.Label();
-            this.BtnLogin = new System.Windows.Forms.Button();
-            this.InputPasswordOutline = new System.Windows.Forms.Panel();
-            this.InputPasswordPadding = new System.Windows.Forms.Panel();
+            this.roundedPanel2 = new UNHS_Attendance_Encoder_Net48.CustomControls.RoundedPanel();
             this.InputPassword = new System.Windows.Forms.TextBox();
             this.InputPasswordIcon = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.InputUsernameOutline = new System.Windows.Forms.Panel();
-            this.InputUsernamePadding = new System.Windows.Forms.Panel();
+            this.BtnLogin = new UNHS_Attendance_Encoder_Net48.CustomControls.ImageButton();
+            this.roundedPanel1 = new UNHS_Attendance_Encoder_Net48.CustomControls.RoundedPanel();
             this.InputUsername = new System.Windows.Forms.TextBox();
             this.InputUsernameIcon = new System.Windows.Forms.PictureBox();
+            this.LblVersionString = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.LoginH3 = new System.Windows.Forms.Label();
-            this.BtnIcnExit = new System.Windows.Forms.PictureBox();
             this.Timer1 = new System.Windows.Forms.Timer(this.components);
+            this.iconButton1 = new UNHS_Attendance_Encoder_Net48.CustomControls.IconButton();
             this.ContainerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ScrollSpy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarouselPictureBox)).BeginInit();
@@ -85,13 +83,12 @@ namespace UNHS_Attendance_Encoder_Net48
             ((System.ComponentModel.ISupportInitialize)(this.LoginBackgroundImage)).BeginInit();
             this.LoginPanel.SuspendLayout();
             this.LoginPanelInputsWrapper.SuspendLayout();
-            this.InputPasswordOutline.SuspendLayout();
-            this.InputPasswordPadding.SuspendLayout();
+            this.roundedPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InputPasswordIcon)).BeginInit();
-            this.InputUsernameOutline.SuspendLayout();
-            this.InputUsernamePadding.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnLogin)).BeginInit();
+            this.roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InputUsernameIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnIcnExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // ContainerPanel
@@ -198,8 +195,8 @@ namespace UNHS_Attendance_Encoder_Net48
             // LoginPanel
             // 
             this.LoginPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(61)))), ((int)(((byte)(84)))));
+            this.LoginPanel.Controls.Add(this.iconButton1);
             this.LoginPanel.Controls.Add(this.LoginPanelInputsWrapper);
-            this.LoginPanel.Controls.Add(this.BtnIcnExit);
             this.LoginPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.LoginPanel.Location = new System.Drawing.Point(418, 0);
             this.LoginPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -214,11 +211,11 @@ namespace UNHS_Attendance_Encoder_Net48
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LoginPanelInputsWrapper.BackColor = System.Drawing.Color.Transparent;
-            this.LoginPanelInputsWrapper.Controls.Add(this.LblVersionString);
+            this.LoginPanelInputsWrapper.Controls.Add(this.roundedPanel2);
             this.LoginPanelInputsWrapper.Controls.Add(this.BtnLogin);
-            this.LoginPanelInputsWrapper.Controls.Add(this.InputPasswordOutline);
+            this.LoginPanelInputsWrapper.Controls.Add(this.roundedPanel1);
+            this.LoginPanelInputsWrapper.Controls.Add(this.LblVersionString);
             this.LoginPanelInputsWrapper.Controls.Add(this.label5);
-            this.LoginPanelInputsWrapper.Controls.Add(this.InputUsernameOutline);
             this.LoginPanelInputsWrapper.Controls.Add(this.label4);
             this.LoginPanelInputsWrapper.Controls.Add(this.label3);
             this.LoginPanelInputsWrapper.Controls.Add(this.LoginH3);
@@ -227,6 +224,101 @@ namespace UNHS_Attendance_Encoder_Net48
             this.LoginPanelInputsWrapper.Padding = new System.Windows.Forms.Padding(8, 32, 8, 8);
             this.LoginPanelInputsWrapper.Size = new System.Drawing.Size(352, 445);
             this.LoginPanelInputsWrapper.TabIndex = 1;
+            // 
+            // roundedPanel2
+            // 
+            this.roundedPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.roundedPanel2.Controls.Add(this.InputPassword);
+            this.roundedPanel2.Controls.Add(this.InputPasswordIcon);
+            this.roundedPanel2.Location = new System.Drawing.Point(11, 202);
+            this.roundedPanel2.Name = "roundedPanel2";
+            this.roundedPanel2.Padding = new System.Windows.Forms.Padding(16, 10, 10, 10);
+            this.roundedPanel2.Size = new System.Drawing.Size(333, 40);
+            this.roundedPanel2.SliceMargins = new System.Windows.Forms.Padding(10);
+            this.roundedPanel2.SourceImage = ((System.Drawing.Image)(resources.GetObject("roundedPanel2.SourceImage")));
+            this.roundedPanel2.TabIndex = 14;
+            // 
+            // InputPassword
+            // 
+            this.InputPassword.BackColor = System.Drawing.Color.White;
+            this.InputPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.InputPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InputPassword.Font = new System.Drawing.Font("Poppins", 10F);
+            this.InputPassword.Location = new System.Drawing.Point(16, 10);
+            this.InputPassword.Margin = new System.Windows.Forms.Padding(1);
+            this.InputPassword.MaxLength = 16;
+            this.InputPassword.Name = "InputPassword";
+            this.InputPassword.PasswordChar = '◈';
+            this.InputPassword.Size = new System.Drawing.Size(287, 20);
+            this.InputPassword.TabIndex = 6;
+            this.InputPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.InputLoginField_KeyUp);
+            // 
+            // InputPasswordIcon
+            // 
+            this.InputPasswordIcon.BackColor = System.Drawing.Color.White;
+            this.InputPasswordIcon.Dock = System.Windows.Forms.DockStyle.Right;
+            this.InputPasswordIcon.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.icn_password;
+            this.InputPasswordIcon.Location = new System.Drawing.Point(303, 10);
+            this.InputPasswordIcon.Name = "InputPasswordIcon";
+            this.InputPasswordIcon.Size = new System.Drawing.Size(20, 20);
+            this.InputPasswordIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.InputPasswordIcon.TabIndex = 7;
+            this.InputPasswordIcon.TabStop = false;
+            // 
+            // BtnLogin
+            // 
+            this.BtnLogin.ButtonFont = new System.Drawing.Font("Poppins", 10F);
+            this.BtnLogin.ButtonText = "Login";
+            this.BtnLogin.ClickedImage = ((System.Drawing.Image)(resources.GetObject("BtnLogin.ClickedImage")));
+            this.BtnLogin.HoverImage = ((System.Drawing.Image)(resources.GetObject("BtnLogin.HoverImage")));
+            this.BtnLogin.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.btn_bg_login_hover;
+            this.BtnLogin.Location = new System.Drawing.Point(264, 263);
+            this.BtnLogin.Name = "BtnLogin";
+            this.BtnLogin.NormalImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.btn_bg_login_hover;
+            this.BtnLogin.Size = new System.Drawing.Size(80, 32);
+            this.BtnLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnLogin.TabIndex = 13;
+            this.BtnLogin.TabStop = false;
+            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
+            // 
+            // roundedPanel1
+            // 
+            this.roundedPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.roundedPanel1.Controls.Add(this.InputUsername);
+            this.roundedPanel1.Controls.Add(this.InputUsernameIcon);
+            this.roundedPanel1.Location = new System.Drawing.Point(11, 128);
+            this.roundedPanel1.Name = "roundedPanel1";
+            this.roundedPanel1.Padding = new System.Windows.Forms.Padding(16, 10, 10, 10);
+            this.roundedPanel1.Size = new System.Drawing.Size(333, 40);
+            this.roundedPanel1.SliceMargins = new System.Windows.Forms.Padding(10);
+            this.roundedPanel1.SourceImage = ((System.Drawing.Image)(resources.GetObject("roundedPanel1.SourceImage")));
+            this.roundedPanel1.TabIndex = 12;
+            // 
+            // InputUsername
+            // 
+            this.InputUsername.BackColor = System.Drawing.Color.White;
+            this.InputUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.InputUsername.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InputUsername.Font = new System.Drawing.Font("Poppins", 10F);
+            this.InputUsername.Location = new System.Drawing.Point(16, 10);
+            this.InputUsername.Margin = new System.Windows.Forms.Padding(1);
+            this.InputUsername.MaxLength = 16;
+            this.InputUsername.Name = "InputUsername";
+            this.InputUsername.Size = new System.Drawing.Size(287, 20);
+            this.InputUsername.TabIndex = 6;
+            this.InputUsername.KeyUp += new System.Windows.Forms.KeyEventHandler(this.InputLoginField_KeyUp);
+            // 
+            // InputUsernameIcon
+            // 
+            this.InputUsernameIcon.BackColor = System.Drawing.Color.White;
+            this.InputUsernameIcon.Dock = System.Windows.Forms.DockStyle.Right;
+            this.InputUsernameIcon.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.icn_user;
+            this.InputUsernameIcon.Location = new System.Drawing.Point(303, 10);
+            this.InputUsernameIcon.Name = "InputUsernameIcon";
+            this.InputUsernameIcon.Size = new System.Drawing.Size(20, 20);
+            this.InputUsernameIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.InputUsernameIcon.TabIndex = 7;
+            this.InputUsernameIcon.TabStop = false;
             // 
             // LblVersionString
             // 
@@ -241,77 +333,6 @@ namespace UNHS_Attendance_Encoder_Net48
             this.LblVersionString.TabIndex = 11;
             this.LblVersionString.Text = "v0.0";
             // 
-            // BtnLogin
-            // 
-            this.BtnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.BtnLogin.BackgroundImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.btn_bg_login;
-            this.BtnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnLogin.Enabled = false;
-            this.BtnLogin.FlatAppearance.BorderSize = 0;
-            this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLogin.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLogin.Location = new System.Drawing.Point(270, 260);
-            this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(75, 30);
-            this.BtnLogin.TabIndex = 10;
-            this.BtnLogin.Text = "Login";
-            this.BtnLogin.UseVisualStyleBackColor = false;
-            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
-            this.BtnLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BtnLogin_MouseDown);
-            this.BtnLogin.MouseEnter += new System.EventHandler(this.BtnLogin_MouseEnter);
-            this.BtnLogin.MouseLeave += new System.EventHandler(this.BtnLogin_MouseLeave);
-            // 
-            // InputPasswordOutline
-            // 
-            this.InputPasswordOutline.AutoSize = true;
-            this.InputPasswordOutline.BackColor = System.Drawing.Color.Transparent;
-            this.InputPasswordOutline.BackgroundImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.input_field_bg_login;
-            this.InputPasswordOutline.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.InputPasswordOutline.Controls.Add(this.InputPasswordPadding);
-            this.InputPasswordOutline.Location = new System.Drawing.Point(12, 203);
-            this.InputPasswordOutline.Name = "InputPasswordOutline";
-            this.InputPasswordOutline.Padding = new System.Windows.Forms.Padding(1);
-            this.InputPasswordOutline.Size = new System.Drawing.Size(333, 34);
-            this.InputPasswordOutline.TabIndex = 9;
-            // 
-            // InputPasswordPadding
-            // 
-            this.InputPasswordPadding.BackColor = System.Drawing.Color.Transparent;
-            this.InputPasswordPadding.Controls.Add(this.InputPassword);
-            this.InputPasswordPadding.Controls.Add(this.InputPasswordIcon);
-            this.InputPasswordPadding.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.InputPasswordPadding.Location = new System.Drawing.Point(1, 1);
-            this.InputPasswordPadding.Name = "InputPasswordPadding";
-            this.InputPasswordPadding.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.InputPasswordPadding.Size = new System.Drawing.Size(331, 32);
-            this.InputPasswordPadding.TabIndex = 8;
-            // 
-            // InputPassword
-            // 
-            this.InputPassword.BackColor = System.Drawing.Color.White;
-            this.InputPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.InputPassword.Font = new System.Drawing.Font("Poppins", 7F);
-            this.InputPassword.Location = new System.Drawing.Point(9, 10);
-            this.InputPassword.Margin = new System.Windows.Forms.Padding(1);
-            this.InputPassword.MaxLength = 16;
-            this.InputPassword.Name = "InputPassword";
-            this.InputPassword.PasswordChar = '●';
-            this.InputPassword.Size = new System.Drawing.Size(288, 14);
-            this.InputPassword.TabIndex = 6;
-            this.InputPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.InputLoginField_KeyUp);
-            // 
-            // InputPasswordIcon
-            // 
-            this.InputPasswordIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.InputPasswordIcon.BackColor = System.Drawing.Color.White;
-            this.InputPasswordIcon.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.icn_password;
-            this.InputPasswordIcon.Location = new System.Drawing.Point(300, 6);
-            this.InputPasswordIcon.Name = "InputPasswordIcon";
-            this.InputPasswordIcon.Size = new System.Drawing.Size(20, 20);
-            this.InputPasswordIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.InputPasswordIcon.TabIndex = 7;
-            this.InputPasswordIcon.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -324,56 +345,6 @@ namespace UNHS_Attendance_Encoder_Net48
             this.label5.Size = new System.Drawing.Size(74, 27);
             this.label5.TabIndex = 6;
             this.label5.Text = "Password";
-            // 
-            // InputUsernameOutline
-            // 
-            this.InputUsernameOutline.AutoSize = true;
-            this.InputUsernameOutline.BackColor = System.Drawing.Color.Transparent;
-            this.InputUsernameOutline.BackgroundImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.input_field_bg_login;
-            this.InputUsernameOutline.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.InputUsernameOutline.Controls.Add(this.InputUsernamePadding);
-            this.InputUsernameOutline.Location = new System.Drawing.Point(11, 134);
-            this.InputUsernameOutline.Name = "InputUsernameOutline";
-            this.InputUsernameOutline.Padding = new System.Windows.Forms.Padding(1);
-            this.InputUsernameOutline.Size = new System.Drawing.Size(334, 34);
-            this.InputUsernameOutline.TabIndex = 8;
-            // 
-            // InputUsernamePadding
-            // 
-            this.InputUsernamePadding.BackColor = System.Drawing.Color.Transparent;
-            this.InputUsernamePadding.Controls.Add(this.InputUsername);
-            this.InputUsernamePadding.Controls.Add(this.InputUsernameIcon);
-            this.InputUsernamePadding.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.InputUsernamePadding.Location = new System.Drawing.Point(1, 1);
-            this.InputUsernamePadding.Name = "InputUsernamePadding";
-            this.InputUsernamePadding.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.InputUsernamePadding.Size = new System.Drawing.Size(332, 32);
-            this.InputUsernamePadding.TabIndex = 8;
-            // 
-            // InputUsername
-            // 
-            this.InputUsername.BackColor = System.Drawing.Color.White;
-            this.InputUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.InputUsername.Font = new System.Drawing.Font("Poppins", 10F);
-            this.InputUsername.Location = new System.Drawing.Point(9, 6);
-            this.InputUsername.Margin = new System.Windows.Forms.Padding(1);
-            this.InputUsername.MaxLength = 16;
-            this.InputUsername.Name = "InputUsername";
-            this.InputUsername.Size = new System.Drawing.Size(288, 20);
-            this.InputUsername.TabIndex = 6;
-            this.InputUsername.KeyUp += new System.Windows.Forms.KeyEventHandler(this.InputLoginField_KeyUp);
-            // 
-            // InputUsernameIcon
-            // 
-            this.InputUsernameIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.InputUsernameIcon.BackColor = System.Drawing.Color.White;
-            this.InputUsernameIcon.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.icn_user;
-            this.InputUsernameIcon.Location = new System.Drawing.Point(300, 6);
-            this.InputUsernameIcon.Name = "InputUsernameIcon";
-            this.InputUsernameIcon.Size = new System.Drawing.Size(20, 20);
-            this.InputUsernameIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.InputUsernameIcon.TabIndex = 7;
-            this.InputUsernameIcon.TabStop = false;
             // 
             // label4
             // 
@@ -413,26 +384,25 @@ namespace UNHS_Attendance_Encoder_Net48
             this.LoginH3.TabIndex = 3;
             this.LoginH3.Text = "User Login";
             // 
-            // BtnIcnExit
-            // 
-            this.BtnIcnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnIcnExit.Image")));
-            this.BtnIcnExit.Location = new System.Drawing.Point(340, 18);
-            this.BtnIcnExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BtnIcnExit.Name = "BtnIcnExit";
-            this.BtnIcnExit.Size = new System.Drawing.Size(22, 22);
-            this.BtnIcnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BtnIcnExit.TabIndex = 0;
-            this.BtnIcnExit.TabStop = false;
-            this.BtnIcnExit.Click += new System.EventHandler(this.BtnIcnExit_Click);
-            this.BtnIcnExit.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BtnIcnExit_MouseDown);
-            this.BtnIcnExit.MouseEnter += new System.EventHandler(this.BtnIcnExit_MouseEnter);
-            this.BtnIcnExit.MouseLeave += new System.EventHandler(this.BtnIcnExit_MouseLeave);
-            // 
             // Timer1
             // 
             this.Timer1.Enabled = true;
             this.Timer1.Interval = 3000;
             this.Timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.ClickedImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.icn_login_close_active;
+            this.iconButton1.HoverImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.icn_login_close_hover;
+            this.iconButton1.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.icn_login_close;
+            this.iconButton1.Location = new System.Drawing.Point(340, 18);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.NormalImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.icn_login_close;
+            this.iconButton1.Size = new System.Drawing.Size(22, 22);
+            this.iconButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconButton1.TabIndex = 2;
+            this.iconButton1.TabStop = false;
+            this.iconButton1.Click += new System.EventHandler(this.BtnIcnExit_Click);
             // 
             // LoginForm
             // 
@@ -457,15 +427,14 @@ namespace UNHS_Attendance_Encoder_Net48
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanelInputsWrapper.ResumeLayout(false);
             this.LoginPanelInputsWrapper.PerformLayout();
-            this.InputPasswordOutline.ResumeLayout(false);
-            this.InputPasswordPadding.ResumeLayout(false);
-            this.InputPasswordPadding.PerformLayout();
+            this.roundedPanel2.ResumeLayout(false);
+            this.roundedPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InputPasswordIcon)).EndInit();
-            this.InputUsernameOutline.ResumeLayout(false);
-            this.InputUsernamePadding.ResumeLayout(false);
-            this.InputUsernamePadding.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnLogin)).EndInit();
+            this.roundedPanel1.ResumeLayout(false);
+            this.roundedPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InputUsernameIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnIcnExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -475,7 +444,6 @@ namespace UNHS_Attendance_Encoder_Net48
         private Panel ContainerPanel;
         private PictureBox LoginBackgroundImage;
         private Panel LoginPanel;
-        private PictureBox BtnIcnExit;
         private Label label1;
         private Panel LoginPanelInputsWrapper;
         private Label LoginH3;
@@ -483,14 +451,8 @@ namespace UNHS_Attendance_Encoder_Net48
         private TextBox InputUsername;
         private Label label4;
         private PictureBox InputUsernameIcon;
-        private Panel InputUsernameOutline;
-        private Panel InputUsernamePadding;
         private Label label5;
-        private Panel InputPasswordOutline;
-        private Panel InputPasswordPadding;
         private TextBox InputPassword;
-        private PictureBox InputPasswordIcon;
-        private Button BtnLogin;
         private Label LblVersionString;
         private PictureBox AppIcon;
         private PictureBox CarouselPictureBox;
@@ -498,6 +460,11 @@ namespace UNHS_Attendance_Encoder_Net48
         private Label CarouselDescription;
         private PictureBox ScrollSpy;
         private Timer Timer1;
+        private CustomControls.RoundedPanel roundedPanel1;
+        private CustomControls.ImageButton BtnLogin;
+        private CustomControls.RoundedPanel roundedPanel2;
+        private PictureBox InputPasswordIcon;
+        private CustomControls.IconButton iconButton1;
     }
 }
 

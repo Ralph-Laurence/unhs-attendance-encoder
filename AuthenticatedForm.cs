@@ -14,7 +14,7 @@ namespace UNHS_Attendance_Encoder_Net48
         {
             base.OnLoad(e);
 
-            if (!UserAuth.IsAuthenticated())
+            if (!AuthManager.CheckAuth())
             {
                 var loginForm = new LoginForm();
                 var dialog = MessageBox.Show("You may need to login first to have access.", "Authentication Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
