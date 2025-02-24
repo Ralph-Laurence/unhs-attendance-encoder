@@ -85,7 +85,7 @@
     <Compile Include="App\Data Containers\Session.cs" />
     <Compile Include="App\Models\User.cs" />
     <Compile Include="App\Security\Password.cs" />
-    <Compile Include="AuthenticatedForm.cs">
+    <Compile Include="View\Screens\AuthenticatedForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="App\Services\AuthManager.cs" />
@@ -108,22 +108,22 @@
     </Compile>
     <Compile Include="App\Data Containers\Constants.cs" />
     <Compile Include="App\Data Containers\LoginCarouselData.cs" />
-    <Compile Include="LoginForm.cs">
+    <Compile Include="View\Screens\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="View\Screens\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainEditor.cs">
+    <Compile Include="View\Screens\MainEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainEditor.Designer.cs">
+    <Compile Include="View\Screens\MainEditor.Designer.cs">
       <DependentUpon>MainEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="MasterForm.cs">
+    <Compile Include="View\Screens\MasterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MasterForm.Designer.cs">
+    <Compile Include="View\Screens\MasterForm.Designer.cs">
       <DependentUpon>MasterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Modals\Alert.cs" />
@@ -135,10 +135,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="View\Screens\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainEditor.resx">
+    <EmbeddedResource Include="View\Screens\MainEditor.resx">
       <DependentUpon>MainEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Modals\Modal.resx">

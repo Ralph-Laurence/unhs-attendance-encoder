@@ -11,8 +11,10 @@ namespace UNHS_Attendance_Encoder_Net48
     {
         public Form Initiator { get; set; }
 
-        public MainEditor()
+        public MainEditor(Form initiator)
         {
+            Initiator = initiator;
+
             InitializeComponent();
         }
 
@@ -37,12 +39,23 @@ namespace UNHS_Attendance_Encoder_Net48
             {
                 AuthManager.Logout();
                 Initiator?.Show();
+                Close();
             });
         }
 
         private void WindowBtnMinimize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void WindowBtnClose_Click(object sender, EventArgs e)
+        {
+            var prompt = "You are about to exit the editor. You will be logged out of your account, and the editor will be closed. Any unsaved progress will be lost. Continue?";
+            Alert.Confirm(prompt, "Confirm Logout", onOK: () =>
+            {
+                AuthManager.Logout();
+                Application.Exit();
+            });
         }
     }
 }

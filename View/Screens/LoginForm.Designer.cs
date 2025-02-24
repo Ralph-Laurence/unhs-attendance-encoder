@@ -61,6 +61,7 @@ namespace UNHS_Attendance_Encoder_Net48
             this.label1 = new System.Windows.Forms.Label();
             this.LoginBackgroundImage = new System.Windows.Forms.PictureBox();
             this.LoginPanel = new System.Windows.Forms.Panel();
+            this.iconButton1 = new UNHS_Attendance_Encoder_Net48.CustomControls.IconButton();
             this.LoginPanelInputsWrapper = new System.Windows.Forms.Panel();
             this.roundedPanel2 = new UNHS_Attendance_Encoder_Net48.CustomControls.RoundedPanel();
             this.InputPassword = new System.Windows.Forms.TextBox();
@@ -75,20 +76,19 @@ namespace UNHS_Attendance_Encoder_Net48
             this.label3 = new System.Windows.Forms.Label();
             this.LoginH3 = new System.Windows.Forms.Label();
             this.Timer1 = new System.Windows.Forms.Timer(this.components);
-            this.iconButton1 = new UNHS_Attendance_Encoder_Net48.CustomControls.IconButton();
             this.ContainerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ScrollSpy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarouselPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AppIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginBackgroundImage)).BeginInit();
             this.LoginPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconButton1)).BeginInit();
             this.LoginPanelInputsWrapper.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InputPasswordIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnLogin)).BeginInit();
             this.roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InputUsernameIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // ContainerPanel
@@ -204,6 +204,20 @@ namespace UNHS_Attendance_Encoder_Net48
             this.LoginPanel.Padding = new System.Windows.Forms.Padding(9, 12, 9, 12);
             this.LoginPanel.Size = new System.Drawing.Size(380, 510);
             this.LoginPanel.TabIndex = 0;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.ClickedImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.icn_login_close_active;
+            this.iconButton1.HoverImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.icn_login_close_hover;
+            this.iconButton1.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.icn_login_close;
+            this.iconButton1.Location = new System.Drawing.Point(340, 18);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.NormalImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.icn_login_close;
+            this.iconButton1.Size = new System.Drawing.Size(22, 22);
+            this.iconButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconButton1.TabIndex = 2;
+            this.iconButton1.TabStop = false;
+            this.iconButton1.Click += new System.EventHandler(this.BtnIcnExit_Click);
             // 
             // LoginPanelInputsWrapper
             // 
@@ -390,20 +404,6 @@ namespace UNHS_Attendance_Encoder_Net48
             this.Timer1.Interval = 3000;
             this.Timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // iconButton1
-            // 
-            this.iconButton1.ClickedImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.icn_login_close_active;
-            this.iconButton1.HoverImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.icn_login_close_hover;
-            this.iconButton1.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.icn_login_close;
-            this.iconButton1.Location = new System.Drawing.Point(340, 18);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.NormalImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.icn_login_close;
-            this.iconButton1.Size = new System.Drawing.Size(22, 22);
-            this.iconButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.TabStop = false;
-            this.iconButton1.Click += new System.EventHandler(this.BtnIcnExit_Click);
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 23F);
@@ -425,6 +425,7 @@ namespace UNHS_Attendance_Encoder_Net48
             ((System.ComponentModel.ISupportInitialize)(this.AppIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginBackgroundImage)).EndInit();
             this.LoginPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconButton1)).EndInit();
             this.LoginPanelInputsWrapper.ResumeLayout(false);
             this.LoginPanelInputsWrapper.PerformLayout();
             this.roundedPanel2.ResumeLayout(false);
@@ -434,7 +435,6 @@ namespace UNHS_Attendance_Encoder_Net48
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InputUsernameIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconButton1)).EndInit();
             this.ResumeLayout(false);
 
         }

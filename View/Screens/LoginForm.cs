@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using UNHS_Attendance_Encoder_Net48.Controller_Services;
 using UNHS_Attendance_Encoder_Net48.Data_Containers;
+using UNHS_Attendance_Encoder_Net48.Modals;
 
 namespace UNHS_Attendance_Encoder_Net48
 {
@@ -46,7 +47,11 @@ namespace UNHS_Attendance_Encoder_Net48
 
         private void BtnIcnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            var prompt = "Sure to exit the application? Click 'OK' to continue or 'Cancel' to go back.";
+            Alert.Confirm(prompt, "Confirm Logout", onOK: () =>
+            {
+                Application.Exit();
+            });
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
@@ -69,7 +74,13 @@ namespace UNHS_Attendance_Encoder_Net48
 
         private void RequestLogin()
         {
-            controller.Login(InputUsername.Text, InputPassword.Text);
+            var result = controller.Login(InputUsername.Text, InputPassword.Text);
+
+            if (result)
+            {
+                InputUsername.Text = string.Empty;
+                InputPassword.Text = string.Empty;
+            }
         }
 
         private void Timer1_Tick(object sender, EventArgs e)

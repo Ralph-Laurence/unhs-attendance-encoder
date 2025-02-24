@@ -95,6 +95,7 @@
             this.WindowBtnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.WindowBtnClose.TabIndex = 8;
             this.WindowBtnClose.TabStop = false;
+            this.WindowBtnClose.Click += new System.EventHandler(this.WindowBtnClose_Click);
             // 
             // WindowBtnMinimize
             // 

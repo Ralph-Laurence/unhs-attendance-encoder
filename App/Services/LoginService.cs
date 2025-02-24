@@ -36,7 +36,8 @@ namespace UNHS_Attendance_Encoder_Net48.Controller_Services
                 return false;
             }
 
-            var editor = new MainEditor();
+            // After successful login, launch the main editor
+            var editor = new MainEditor(Initiator);
             editor.Show();
 
             Initiator.Hide();
