@@ -253,6 +253,16 @@ namespace UNHS_Attendance_Encoder_Net48.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap modal_icon_in_action {
+            get {
+                object obj = ResourceManager.GetObject("modal_icon_in_action", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap modal_icon_info {
             get {
                 object obj = ResourceManager.GetObject("modal_icon_info", resourceCulture);
@@ -276,6 +286,16 @@ namespace UNHS_Attendance_Encoder_Net48.Properties {
         internal static System.Drawing.Bitmap rounded_panel_9slice {
             get {
                 object obj = ResourceManager.GetObject("rounded_panel_9slice", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rounded_panel_9slice_gray {
+            get {
+                object obj = ResourceManager.GetObject("rounded_panel_9slice_gray", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,6 +333,26 @@ namespace UNHS_Attendance_Encoder_Net48.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap toolbar_icn_clear {
+            get {
+                object obj = ResourceManager.GetObject("toolbar_icn_clear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toolbar_icn_edit_row {
+            get {
+                object obj = ResourceManager.GetObject("toolbar_icn_edit_row", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap toolbar_icn_export {
             get {
                 object obj = ResourceManager.GetObject("toolbar_icn_export", resourceCulture);
@@ -326,6 +366,16 @@ namespace UNHS_Attendance_Encoder_Net48.Properties {
         internal static System.Drawing.Bitmap toolbar_icn_help {
             get {
                 object obj = ResourceManager.GetObject("toolbar_icn_help", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toolbar_icn_insert_row {
+            get {
+                object obj = ResourceManager.GetObject("toolbar_icn_insert_row", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -386,6 +436,16 @@ namespace UNHS_Attendance_Encoder_Net48.Properties {
         internal static System.Drawing.Bitmap toolbar_icn_placeholder {
             get {
                 object obj = ResourceManager.GetObject("toolbar_icn_placeholder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toolbar_icn_remove_row {
+            get {
+                object obj = ResourceManager.GetObject("toolbar_icn_remove_row", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

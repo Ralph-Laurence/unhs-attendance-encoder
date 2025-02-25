@@ -11,5 +11,6 @@ namespace UNHS_Attendance_Encoder_Net48.Data_Containers
         public const string PrimaryFontMedium = "Poppins-Medium.ttf";
         public const int PrimaryFontIndex = 0;
         public const int PrimaryFontMediumIndex = 1;
+        public const string TimestampFormat = "yyyy-MM-dd HH:mm:ss";
     }
 }

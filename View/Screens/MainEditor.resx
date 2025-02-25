@@ -132,6 +132,12 @@
   <metadata name="roundedPanel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="EntryNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="RowKey.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="EmployeeID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -148,6 +154,24 @@
     <value>True</value>
   </metadata>
   <metadata name="TimeOut.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Duration.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Status.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Undertime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Overtime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Late.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="WeekNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
@@ -167,26 +191,32 @@
         8+uvoNhFKdpPp+h1f0ev+9/iiVAqfQPxrE3ICx37mQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="FlyoutContainer.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="roundedPanel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="roundedPanel1.SourceImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="toolbarBtnClearRows.SourceImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAmFJREFUeF7tm0tOAlEQRfGDEQfG/9816DIYkBAmhM1o1F0wANakDvwMoZs9wACt
-        i5ekyjSCQ+rVSe6kU928c6Vbke5SEPzJumRDZXOJlBdka4kU7adT9Lq/o9e9JvkXEMdCdiS7kj2VfZUD
-        5lDlSOVY5YQ5VTlT0dtns3p/fVz9erM16HXp9WL92xKUslQRkK9Uq9Wrfr9/PxqNnieTyehrBcG6sf48
-        z+8ajcY5vOg3l6l8u92+kR3feBwXwKfT6dzAj56FlGu12qU3+Rni9Q4/eP7oWtDKzmAwuOe8S7Ise4Qn
-        fQ24Wu7inOGsS8TvBZ70NWDD3qpe8JYFfvCkr2FaAOdcA0/6GvB7MqUC4GvAhn3OuAae9DVEAZLkCzjg
-        jGvgSV9DFCA55Ixr4ElfQxQgSboAfEI64oxr4ElfQxQgSb6AY864Bp70NUQBkuQLOOGMa+BJX0PyBeCL
-        kFPOuAae9DVEAZLkCzjjjGvgSV9DFCBJvoC4CHLGNfCkryH5AuJPYUnyBcTHYc64Bp70NUQBkvinKGdc
-        A0/6GpIvIL4ak0QBnHENPOlrwIa4QYIzroEnfQ3YEDdJccY18KSvIQqQJH2naPL3Ck8LSOBu8TE86WvA
-        Bjwv8MJZl4jfKzzpa5g+MZJl2QNnXZLn+dwnRkC5Xq9fjMfjD867Qrw+m83m3GeGAJ6rq3S73VsMcz8X
-        4Ifa6/Vu4UfPueCtUZF3wrWcDk84Z3Dh4HFWCqwb6x8Ohw+tVusCXvRbCIbwxUGST45qUASulrPgIIuC
-        8+uvoNhFKdpPp+h1f0ev+9/iiVAqfQPxrE3ICx37mQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAABGdBTUEAALGPC/xhBQAAAAZQTFRF0tLS
+        7u7uocq1dwAAAAlwSFlzAAAOvAAADrwBlbxySQAAACNJREFUSMdjoAIQxAtGFYwqGFUwqmBUwaiCUQWD
+        TQFlgIEBADYjd4l7HG1XAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="toolbarBtnRemoveRow.SourceImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAABGdBTUEAALGPC/xhBQAAAAZQTFRF0tLS
+        7u7uocq1dwAAAAlwSFlzAAAOvAAADrwBlbxySQAAACNJREFUSMdjoAIQxAtGFYwqGFUwqmBUwaiCUQWD
+        TQFlgIEBADYjd4l7HG1XAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="toolbarBtnEditRow.SourceImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAABGdBTUEAALGPC/xhBQAAAAZQTFRF0tLS
+        7u7uocq1dwAAAAlwSFlzAAAOvAAADrwBlbxySQAAACNJREFUSMdjoAIQxAtGFYwqGFUwqmBUwaiCUQWD
+        TQFlgIEBADYjd4l7HG1XAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="toolbarBtnInsert.SourceImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAABGdBTUEAALGPC/xhBQAAAAZQTFRF0tLS
+        7u7uocq1dwAAAAlwSFlzAAAOvAAADrwBlbxySQAAACNJREFUSMdjoAIQxAtGFYwqGFUwqmBUwaiCUQWD
+        TQFlgIEBADYjd4l7HG1XAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="toolbarImageButton2.SourceImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -196,7 +226,7 @@
         TQFlgIEBADYjd4l7HG1XAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="toolbarImageButton1.SourceImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="toolbarBtnSave.SourceImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAABGdBTUEAALGPC/xhBQAAAAZQTFRF0tLS
         7u7uocq1dwAAAAlwSFlzAAAOvAAADrwBlbxySQAAACNJREFUSMdjoAIQxAtGFYwqGFUwqmBUwaiCUQWD
