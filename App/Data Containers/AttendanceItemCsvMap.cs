@@ -6,8 +6,7 @@ namespace UNHS_Attendance_Encoder_Net48.App.Data_Containers
     {
         public AttendanceItemCsvMap()
         {
-            Map(m => m.EmployeeID).Name("emp_fk_id");
-            Map(m => m.DateCreated).Name("created_at");
+            Map(m => m.EmployeeID).Name("emp_no");
             Map(m => m.TimeIn).Name("time_in");
             Map(m => m.LunchFrom).Name("lunch_start");
             Map(m => m.LunchTo).Name("lunch_end");
@@ -18,6 +17,8 @@ namespace UNHS_Attendance_Encoder_Net48.App.Data_Containers
             Map(m => m.Duration).Name("duration");
             Map(m => m.Status).Name("status");
             Map(m => m.Week).Name("week_no");
+            Map(m => m.DateCreated).Name("created_at");
+            Map(m => m.DateUpdated).Name("updated_at");
         }
     }
 }

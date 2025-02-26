@@ -37,7 +37,7 @@ namespace UNHS_Attendance_Encoder_Net48
         //    // LoginForm
         //    // 
         //    this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-        //    this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        //    this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
         //    this.ClientSize = new System.Drawing.Size(800, 450);
         //    this.Name = "LoginForm";
         //    this.Text = "Form1";
@@ -407,7 +407,7 @@ namespace UNHS_Attendance_Encoder_Net48
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 23F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(56)))));
             this.ClientSize = new System.Drawing.Size(800, 512);
             this.Controls.Add(this.ContainerPanel);

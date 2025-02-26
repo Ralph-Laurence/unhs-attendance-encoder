@@ -176,7 +176,7 @@
             this.LblOvertimeIndicator.Name = "LblOvertimeIndicator";
             this.LblOvertimeIndicator.Size = new System.Drawing.Size(120, 22);
             this.LblOvertimeIndicator.TabIndex = 38;
-            this.LblOvertimeIndicator.Text = "00:00";
+            this.LblOvertimeIndicator.Text = "0h";
             this.LblOvertimeIndicator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblUndertimeIndicator
@@ -187,7 +187,7 @@
             this.LblUndertimeIndicator.Name = "LblUndertimeIndicator";
             this.LblUndertimeIndicator.Size = new System.Drawing.Size(120, 22);
             this.LblUndertimeIndicator.TabIndex = 37;
-            this.LblUndertimeIndicator.Text = "00:00";
+            this.LblUndertimeIndicator.Text = "0h";
             this.LblUndertimeIndicator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblLateIndicator
@@ -198,7 +198,7 @@
             this.LblLateIndicator.Name = "LblLateIndicator";
             this.LblLateIndicator.Size = new System.Drawing.Size(120, 22);
             this.LblLateIndicator.TabIndex = 33;
-            this.LblLateIndicator.Text = "00:00";
+            this.LblLateIndicator.Text = "0h";
             this.LblLateIndicator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
@@ -265,7 +265,7 @@
             this.inputTimeOut.ShowUpDown = true;
             this.inputTimeOut.Size = new System.Drawing.Size(100, 27);
             this.inputTimeOut.TabIndex = 5;
-            this.inputTimeOut.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OnDateTimerPicker_ForceUpdate);
+            this.inputTimeOut.ValueChanged += new System.EventHandler(this.inputTimeOut_ValueChanged);
             this.inputTimeOut.Leave += new System.EventHandler(this.dateTimePicker_Leave);
             // 
             // inputLunchTo
@@ -278,7 +278,6 @@
             this.inputLunchTo.ShowUpDown = true;
             this.inputLunchTo.Size = new System.Drawing.Size(100, 27);
             this.inputLunchTo.TabIndex = 4;
-            this.inputLunchTo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OnDateTimerPicker_ForceUpdate);
             this.inputLunchTo.Leave += new System.EventHandler(this.dateTimePicker_Leave);
             // 
             // inputLunchFrom
@@ -291,7 +290,6 @@
             this.inputLunchFrom.ShowUpDown = true;
             this.inputLunchFrom.Size = new System.Drawing.Size(100, 27);
             this.inputLunchFrom.TabIndex = 3;
-            this.inputLunchFrom.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OnDateTimerPicker_ForceUpdate);
             this.inputLunchFrom.Leave += new System.EventHandler(this.dateTimePicker_Leave);
             // 
             // inputTimeIn
@@ -303,7 +301,7 @@
             this.inputTimeIn.ShowUpDown = true;
             this.inputTimeIn.Size = new System.Drawing.Size(100, 27);
             this.inputTimeIn.TabIndex = 2;
-            this.inputTimeIn.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OnDateTimerPicker_ForceUpdate);
+            this.inputTimeIn.ValueChanged += new System.EventHandler(this.inputTimeIn_ValueChanged);
             this.inputTimeIn.Leave += new System.EventHandler(this.dateTimePicker_Leave);
             // 
             // label7
@@ -324,7 +322,6 @@
             this.inputDate.Name = "inputDate";
             this.inputDate.Size = new System.Drawing.Size(210, 27);
             this.inputDate.TabIndex = 1;
-            this.inputDate.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OnDateTimerPicker_ForceUpdate);
             this.inputDate.Leave += new System.EventHandler(this.dateTimePicker_Leave);
             // 
             // label6
@@ -425,8 +422,8 @@
             // 
             // AddAttendanceDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 23F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(56)))));
             this.ClientSize = new System.Drawing.Size(475, 400);
             this.Controls.Add(this.WindowOutline);

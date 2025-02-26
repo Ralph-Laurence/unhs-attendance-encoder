@@ -33,5 +33,10 @@ namespace UNHS_Attendance_Encoder_Net48.View.Modals
 
             base.OnFormClosing(e);
         }
+
+        private void ModalClose_Click(object sender, System.EventArgs e)
+        {
+            btnCancel_Click(sender, e);
+        }
     }
 }

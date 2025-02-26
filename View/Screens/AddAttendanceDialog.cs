@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
-using System.Reflection;
-using System.Threading;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using UNHS_Attendance_Encoder_Net48.App.Data_Containers;
@@ -31,10 +28,14 @@ namespace UNHS_Attendance_Encoder_Net48.View.Screens
 
         private void AddAttendanceDialog_Load(object sender, EventArgs e)
         {
+            inputTimeOut.ValueChanged -= inputTimeOut_ValueChanged;
+
             inputLunchFrom.Value    = defaultTime;
             inputLunchTo.Value      = defaultTime;
             inputTimeOut.Value      = defaultTime;
             inputDate.Value         = DateTime.Today;
+
+            inputTimeOut.ValueChanged += inputTimeOut_ValueChanged;
 
             if (Mode == 1 && AttendanceDataEdit != null)
                 LoadFrom(AttendanceDataEdit);
@@ -152,6 +153,7 @@ namespace UNHS_Attendance_Encoder_Net48.View.Screens
             {
                 EmployeeID  = inputEmployeeID.Text,
                 DateCreated = timeIn,
+                DateUpdated = timeIn,
                 TimeIn      = timeIn,
                 LunchFrom   = lunchFrom,
                 LunchTo     = lunchTo,
@@ -276,7 +278,7 @@ namespace UNHS_Attendance_Encoder_Net48.View.Screens
             }
             else
             {
-                LblLateIndicator.Text = zeroTime;
+                LblLateIndicator.Text = "0h";
             }
         }
 
@@ -295,7 +297,7 @@ namespace UNHS_Attendance_Encoder_Net48.View.Screens
                 }
                 else
                 {
-                    LblOvertimeIndicator.Text = zeroTime;
+                    LblOvertimeIndicator.Text = "0h";
                 }
 
                 // All TimeOut(s) made before 5:00 PM are considered undertime
@@ -309,7 +311,7 @@ namespace UNHS_Attendance_Encoder_Net48.View.Screens
                 }
                 else
                 {
-                    LblUndertimeIndicator.Text = zeroTime;
+                    LblUndertimeIndicator.Text = "0h";
                 }
             }
         }
@@ -367,11 +369,6 @@ namespace UNHS_Attendance_Encoder_Net48.View.Screens
             //// Update your logic here
             //var selectedTime = dateTimePicker.Value;
             //Debug.WriteLine(selectedTime);
-        }
-
-        private void OnDateTimerPicker_ForceUpdate(object sender, KeyEventArgs e)
-        {
-            
         }
     }
 }

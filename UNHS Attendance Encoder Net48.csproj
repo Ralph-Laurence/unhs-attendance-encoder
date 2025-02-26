@@ -14,7 +14,10 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\Users\user-PC\source\repos\UNHS Attendance Encoder Net48\publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -24,13 +27,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -119,6 +120,12 @@
     <Compile Include="View\CustomControls\IndefiniteLoader.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="View\Modals\Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modals\Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Modals\LoadingDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +140,12 @@
     </Compile>
     <Compile Include="View\Modals\OverlayForm.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modals\ProjectBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Modals\ProjectBrowser.Designer.cs">
+      <DependentUpon>ProjectBrowser.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Screens\AddAttendanceDialog.cs">
       <SubType>Form</SubType>
@@ -190,11 +203,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\Modals\Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Modals\LoadingDialog.resx">
       <DependentUpon>LoadingDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Modals\NewProjectDialog.resx">
       <DependentUpon>NewProjectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Modals\ProjectBrowser.resx">
+      <DependentUpon>ProjectBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Screens\AddAttendanceDialog.resx">
       <DependentUpon>AddAttendanceDialog.cs</DependentUpon>

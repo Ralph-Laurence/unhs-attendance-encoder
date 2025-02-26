@@ -7,6 +7,7 @@ namespace UNHS_Attendance_Encoder_Net48.App.Data_Containers
     {
         public string EmployeeID { get; set; }
         public string DateCreated { get; set; }
+        public string DateUpdated { get; set; }
         public string TimeIn { get; set; }
         public string LunchFrom { get; set; }
         public string LunchTo { get; set; }

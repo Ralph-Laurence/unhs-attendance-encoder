@@ -1,6 +1,6 @@
 ﻿namespace UNHS_Attendance_Encoder_Net48.View.Modals
 {
-    partial class NewProjectDialog
+    partial class ProjectBrowser
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewProjectDialog));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProjectBrowser));
             this.WindowTitleBar = new System.Windows.Forms.Panel();
             this.ModalClose = new UNHS_Attendance_Encoder_Net48.CustomControls.IconButton();
             this.ModalTitle = new System.Windows.Forms.Label();
             this.ModalIcon = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLoad = new UNHS_Attendance_Encoder_Net48.CustomControls.ImageButton();
             this.btnCancel = new UNHS_Attendance_Encoder_Net48.CustomControls.ImageButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.inputProjectName = new System.Windows.Forms.TextBox();
-            this.btnOK = new UNHS_Attendance_Encoder_Net48.CustomControls.ImageButton();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.LblProjectFolder = new System.Windows.Forms.Label();
             this.WindowTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ModalClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModalIcon)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLoad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnOK)).BeginInit();
             this.SuspendLayout();
             // 
             // WindowTitleBar
@@ -54,10 +51,10 @@
             this.WindowTitleBar.Controls.Add(this.ModalTitle);
             this.WindowTitleBar.Controls.Add(this.ModalIcon);
             this.WindowTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.WindowTitleBar.Location = new System.Drawing.Point(2, 0);
+            this.WindowTitleBar.Location = new System.Drawing.Point(0, 0);
             this.WindowTitleBar.Name = "WindowTitleBar";
-            this.WindowTitleBar.Size = new System.Drawing.Size(296, 32);
-            this.WindowTitleBar.TabIndex = 3;
+            this.WindowTitleBar.Size = new System.Drawing.Size(280, 32);
+            this.WindowTitleBar.TabIndex = 4;
             // 
             // ModalClose
             // 
@@ -65,7 +62,7 @@
             this.ModalClose.ClickedImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_close_active;
             this.ModalClose.HoverImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_close_hover;
             this.ModalClose.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_close;
-            this.ModalClose.Location = new System.Drawing.Point(270, 6);
+            this.ModalClose.Location = new System.Drawing.Point(254, 6);
             this.ModalClose.Name = "ModalClose";
             this.ModalClose.NormalImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_close;
             this.ModalClose.Size = new System.Drawing.Size(22, 22);
@@ -82,13 +79,13 @@
             this.ModalTitle.Location = new System.Drawing.Point(35, 5);
             this.ModalTitle.Name = "ModalTitle";
             this.ModalTitle.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.ModalTitle.Size = new System.Drawing.Size(80, 23);
+            this.ModalTitle.Size = new System.Drawing.Size(83, 23);
             this.ModalTitle.TabIndex = 4;
-            this.ModalTitle.Text = "New Project";
+            this.ModalTitle.Text = "Load Project";
             // 
             // ModalIcon
             // 
-            this.ModalIcon.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.toolbar_icn_new;
+            this.ModalIcon.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.toolbar_icn_load;
             this.ModalIcon.Location = new System.Drawing.Point(7, 5);
             this.ModalIcon.Name = "ModalIcon";
             this.ModalIcon.Size = new System.Drawing.Size(22, 22);
@@ -96,18 +93,21 @@
             this.ModalIcon.TabIndex = 2;
             this.ModalIcon.TabStop = false;
             // 
-            // panel1
+            // btnLoad
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btnCancel);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.inputProjectName);
-            this.panel1.Controls.Add(this.btnOK);
-            this.panel1.Location = new System.Drawing.Point(5, 38);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(290, 157);
-            this.panel1.TabIndex = 5;
+            this.btnLoad.ButtonFont = new System.Drawing.Font("Poppins Medium", 9F);
+            this.btnLoad.ButtonText = "Load";
+            this.btnLoad.ClickedImage = ((System.Drawing.Image)(resources.GetObject("btnLoad.ClickedImage")));
+            this.btnLoad.HoverImage = ((System.Drawing.Image)(resources.GetObject("btnLoad.HoverImage")));
+            this.btnLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.Image")));
+            this.btnLoad.Location = new System.Drawing.Point(188, 360);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.NormalImage = ((System.Drawing.Image)(resources.GetObject("btnLoad.NormalImage")));
+            this.btnLoad.Size = new System.Drawing.Size(80, 28);
+            this.btnLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnLoad.TabIndex = 5;
+            this.btnLoad.TabStop = false;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnCancel
             // 
@@ -116,88 +116,60 @@
             this.btnCancel.ClickedImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.ClickedImage")));
             this.btnCancel.HoverImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.HoverImage")));
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(115, 119);
+            this.btnCancel.Location = new System.Drawing.Point(102, 360);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.NormalImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.NormalImage")));
             this.btnCancel.Size = new System.Drawing.Size(80, 28);
             this.btnCancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnCancel.TabIndex = 7;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.TabStop = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // label2
+            // listBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Poppins Medium", 8F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.label2.Location = new System.Drawing.Point(11, 73);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.label2.Size = new System.Drawing.Size(202, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Set a project name. (Max 32 chars)";
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 23;
+            this.listBox1.Location = new System.Drawing.Point(12, 90);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(256, 257);
+            this.listBox1.TabIndex = 7;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // label1
+            // LblProjectFolder
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Poppins Medium", 9.5F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.label1.Location = new System.Drawing.Point(11, 16);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.label1.Size = new System.Drawing.Size(101, 24);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Project Name:";
+            this.LblProjectFolder.AutoEllipsis = true;
+            this.LblProjectFolder.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblProjectFolder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblProjectFolder.Location = new System.Drawing.Point(12, 45);
+            this.LblProjectFolder.Name = "LblProjectFolder";
+            this.LblProjectFolder.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.LblProjectFolder.Size = new System.Drawing.Size(256, 42);
+            this.LblProjectFolder.TabIndex = 6;
+            this.LblProjectFolder.Text = "Project Folder";
+            this.LblProjectFolder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // inputProjectName
-            // 
-            this.inputProjectName.Location = new System.Drawing.Point(13, 43);
-            this.inputProjectName.MaxLength = 32;
-            this.inputProjectName.Name = "inputProjectName";
-            this.inputProjectName.Size = new System.Drawing.Size(268, 27);
-            this.inputProjectName.TabIndex = 1;
-            // 
-            // btnOK
-            // 
-            this.btnOK.ButtonFont = new System.Drawing.Font("Poppins Medium", 9F);
-            this.btnOK.ButtonText = "OK";
-            this.btnOK.ClickedImage = ((System.Drawing.Image)(resources.GetObject("btnOK.ClickedImage")));
-            this.btnOK.HoverImage = ((System.Drawing.Image)(resources.GetObject("btnOK.HoverImage")));
-            this.btnOK.Image = ((System.Drawing.Image)(resources.GetObject("btnOK.Image")));
-            this.btnOK.Location = new System.Drawing.Point(201, 119);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.NormalImage = ((System.Drawing.Image)(resources.GetObject("btnOK.NormalImage")));
-            this.btnOK.Size = new System.Drawing.Size(80, 28);
-            this.btnOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnOK.TabIndex = 0;
-            this.btnOK.TabStop = false;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // NewProjectDialog
+            // ProjectBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(300, 200);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(280, 400);
+            this.Controls.Add(this.LblProjectFolder);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.WindowTitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "NewProjectDialog";
-            this.Padding = new System.Windows.Forms.Padding(2, 0, 2, 2);
+            this.Name = "ProjectBrowser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NewProjectDialog";
+            this.Text = "ProjectBrowser";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.ProjectBrowser_Load);
             this.WindowTitleBar.ResumeLayout(false);
             this.WindowTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ModalClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModalIcon)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLoad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnOK)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -205,14 +177,12 @@
         #endregion
 
         private System.Windows.Forms.Panel WindowTitleBar;
+        private CustomControls.IconButton ModalClose;
         private System.Windows.Forms.Label ModalTitle;
         private System.Windows.Forms.PictureBox ModalIcon;
-        private System.Windows.Forms.Panel panel1;
-        private CustomControls.ImageButton btnOK;
-        private System.Windows.Forms.TextBox inputProjectName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private CustomControls.IconButton ModalClose;
+        private CustomControls.ImageButton btnLoad;
         private CustomControls.ImageButton btnCancel;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label LblProjectFolder;
     }
 }

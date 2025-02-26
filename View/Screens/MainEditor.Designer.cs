@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainEditor));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.WindowTitleBar = new System.Windows.Forms.Panel();
             this.WindowBtnClose = new UNHS_Attendance_Encoder_Net48.CustomControls.IconButton();
             this.WindowBtnMinimize = new UNHS_Attendance_Encoder_Net48.CustomControls.IconButton();
@@ -60,7 +60,7 @@
             this.toolbarBtnRemoveRow = new UNHS_Attendance_Encoder_Net48.CustomControls.ToolbarImageButton();
             this.toolbarBtnEditRow = new UNHS_Attendance_Encoder_Net48.CustomControls.ToolbarImageButton();
             this.toolbarBtnInsert = new UNHS_Attendance_Encoder_Net48.CustomControls.ToolbarImageButton();
-            this.toolbarImageButton2 = new UNHS_Attendance_Encoder_Net48.CustomControls.ToolbarImageButton();
+            this.toolbarBtnHelp = new UNHS_Attendance_Encoder_Net48.CustomControls.ToolbarImageButton();
             this.toolbarBtnSave = new UNHS_Attendance_Encoder_Net48.CustomControls.ToolbarImageButton();
             this.toolbarBtnExport = new UNHS_Attendance_Encoder_Net48.CustomControls.ToolbarImageButton();
             this.toolbarBtnLoad = new UNHS_Attendance_Encoder_Net48.CustomControls.ToolbarImageButton();
@@ -90,8 +90,9 @@
             this.WindowTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.WindowTitleBar.Location = new System.Drawing.Point(2, 2);
             this.WindowTitleBar.Name = "WindowTitleBar";
-            this.WindowTitleBar.Size = new System.Drawing.Size(1076, 32);
+            this.WindowTitleBar.Size = new System.Drawing.Size(996, 32);
             this.WindowTitleBar.TabIndex = 0;
+            this.WindowTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTitleBar_MouseDown);
             // 
             // WindowBtnClose
             // 
@@ -99,7 +100,7 @@
             this.WindowBtnClose.ClickedImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_close_active;
             this.WindowBtnClose.HoverImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_close_hover;
             this.WindowBtnClose.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_close;
-            this.WindowBtnClose.Location = new System.Drawing.Point(1051, 4);
+            this.WindowBtnClose.Location = new System.Drawing.Point(971, 4);
             this.WindowBtnClose.Name = "WindowBtnClose";
             this.WindowBtnClose.NormalImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_close;
             this.WindowBtnClose.Size = new System.Drawing.Size(22, 22);
@@ -114,7 +115,7 @@
             this.WindowBtnMinimize.ClickedImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_minimize_active;
             this.WindowBtnMinimize.HoverImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_minimize_hover;
             this.WindowBtnMinimize.Image = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_minimize;
-            this.WindowBtnMinimize.Location = new System.Drawing.Point(1023, 4);
+            this.WindowBtnMinimize.Location = new System.Drawing.Point(943, 4);
             this.WindowBtnMinimize.Name = "WindowBtnMinimize";
             this.WindowBtnMinimize.NormalImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.window_control_minimize;
             this.WindowBtnMinimize.Size = new System.Drawing.Size(22, 22);
@@ -163,35 +164,41 @@
             // 
             // EditorWindowContent
             // 
+            this.EditorWindowContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.EditorWindowContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.EditorWindowContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.EditorWindowContent.Controls.Add(this.panel2);
             this.EditorWindowContent.Controls.Add(this.panel1);
-            this.EditorWindowContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EditorWindowContent.Location = new System.Drawing.Point(2, 34);
             this.EditorWindowContent.Name = "EditorWindowContent";
-            this.EditorWindowContent.Size = new System.Drawing.Size(1076, 684);
+            this.EditorWindowContent.Size = new System.Drawing.Size(996, 644);
             this.EditorWindowContent.TabIndex = 1;
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.roundedPanel2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 64);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(24, 16, 24, 16);
-            this.panel2.Size = new System.Drawing.Size(1076, 620);
+            this.panel2.Size = new System.Drawing.Size(996, 580);
             this.panel2.TabIndex = 4;
             // 
             // roundedPanel2
             // 
+            this.roundedPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.roundedPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.roundedPanel2.Controls.Add(this.dataGridView1);
-            this.roundedPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.roundedPanel2.Location = new System.Drawing.Point(24, 16);
             this.roundedPanel2.Name = "roundedPanel2";
             this.roundedPanel2.Padding = new System.Windows.Forms.Padding(16);
-            this.roundedPanel2.Size = new System.Drawing.Size(1028, 588);
+            this.roundedPanel2.Size = new System.Drawing.Size(948, 548);
             this.roundedPanel2.SliceMargins = new System.Windows.Forms.Padding(10);
             this.roundedPanel2.SourceImage = ((System.Drawing.Image)(resources.GetObject("roundedPanel2.SourceImage")));
             this.roundedPanel2.TabIndex = 0;
@@ -202,18 +209,21 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(201)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(201)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EntryNo,
@@ -230,15 +240,14 @@
             this.Overtime,
             this.Late,
             this.WeekNo});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.Location = new System.Drawing.Point(16, 16);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -248,7 +257,7 @@
             this.dataGridView1.RowTemplate.Height = 32;
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(996, 556);
+            this.dataGridView1.Size = new System.Drawing.Size(916, 516);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
             this.dataGridView1.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView1_RowsRemoved);
@@ -368,22 +377,23 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.toolbarBtnClearRows);
             this.panel1.Controls.Add(this.toolbarBtnRemoveRow);
             this.panel1.Controls.Add(this.toolbarBtnEditRow);
             this.panel1.Controls.Add(this.toolbarBtnInsert);
-            this.panel1.Controls.Add(this.toolbarImageButton2);
+            this.panel1.Controls.Add(this.toolbarBtnHelp);
             this.panel1.Controls.Add(this.toolbarBtnSave);
             this.panel1.Controls.Add(this.toolbarBtnExport);
             this.panel1.Controls.Add(this.toolbarBtnLoad);
             this.panel1.Controls.Add(this.toolbarBtnNew);
             this.panel1.Controls.Add(this.LblLoggedUser);
             this.panel1.Controls.Add(this.BtnLogin);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1076, 64);
+            this.panel1.Size = new System.Drawing.Size(996, 64);
             this.panel1.TabIndex = 0;
             // 
             // toolbarBtnClearRows
@@ -442,18 +452,19 @@
             this.toolbarBtnInsert.TabIndex = 5;
             this.toolbarBtnInsert.Click += new System.EventHandler(this.toolbarBtnInsert_Click);
             // 
-            // toolbarImageButton2
+            // toolbarBtnHelp
             // 
-            this.toolbarImageButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.toolbarImageButton2.ButtonText = "Help";
-            this.toolbarImageButton2.IconImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.toolbar_icn_help;
-            this.toolbarImageButton2.Location = new System.Drawing.Point(240, 6);
-            this.toolbarImageButton2.Name = "toolbarImageButton2";
-            this.toolbarImageButton2.Padding = new System.Windows.Forms.Padding(2);
-            this.toolbarImageButton2.Size = new System.Drawing.Size(52, 52);
-            this.toolbarImageButton2.SliceMargins = new System.Windows.Forms.Padding(10);
-            this.toolbarImageButton2.SourceImage = ((System.Drawing.Image)(resources.GetObject("toolbarImageButton2.SourceImage")));
-            this.toolbarImageButton2.TabIndex = 5;
+            this.toolbarBtnHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toolbarBtnHelp.ButtonText = "Help";
+            this.toolbarBtnHelp.IconImage = global::UNHS_Attendance_Encoder_Net48.Properties.Resources.toolbar_icn_help;
+            this.toolbarBtnHelp.Location = new System.Drawing.Point(240, 6);
+            this.toolbarBtnHelp.Name = "toolbarBtnHelp";
+            this.toolbarBtnHelp.Padding = new System.Windows.Forms.Padding(2);
+            this.toolbarBtnHelp.Size = new System.Drawing.Size(52, 52);
+            this.toolbarBtnHelp.SliceMargins = new System.Windows.Forms.Padding(10);
+            this.toolbarBtnHelp.SourceImage = ((System.Drawing.Image)(resources.GetObject("toolbarBtnHelp.SourceImage")));
+            this.toolbarBtnHelp.TabIndex = 5;
+            this.toolbarBtnHelp.Click += new System.EventHandler(this.toolbarBtnHelp_Click);
             // 
             // toolbarBtnSave
             // 
@@ -495,6 +506,7 @@
             this.toolbarBtnLoad.SliceMargins = new System.Windows.Forms.Padding(10);
             this.toolbarBtnLoad.SourceImage = ((System.Drawing.Image)(resources.GetObject("toolbarBtnLoad.SourceImage")));
             this.toolbarBtnLoad.TabIndex = 5;
+            this.toolbarBtnLoad.Click += new System.EventHandler(this.toolbarBtnLoad_Click);
             // 
             // toolbarBtnNew
             // 
@@ -516,7 +528,7 @@
             this.LblLoggedUser.AutoEllipsis = true;
             this.LblLoggedUser.Font = new System.Drawing.Font("Poppins Medium", 9F);
             this.LblLoggedUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(56)))));
-            this.LblLoggedUser.Location = new System.Drawing.Point(886, 20);
+            this.LblLoggedUser.Location = new System.Drawing.Point(806, 20);
             this.LblLoggedUser.Name = "LblLoggedUser";
             this.LblLoggedUser.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.LblLoggedUser.Size = new System.Drawing.Size(94, 23);
@@ -532,7 +544,7 @@
             this.BtnLogin.ClickedImage = ((System.Drawing.Image)(resources.GetObject("BtnLogin.ClickedImage")));
             this.BtnLogin.HoverImage = ((System.Drawing.Image)(resources.GetObject("BtnLogin.HoverImage")));
             this.BtnLogin.Image = ((System.Drawing.Image)(resources.GetObject("BtnLogin.Image")));
-            this.BtnLogin.Location = new System.Drawing.Point(986, 18);
+            this.BtnLogin.Location = new System.Drawing.Point(906, 18);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.NormalImage = ((System.Drawing.Image)(resources.GetObject("BtnLogin.NormalImage")));
             this.BtnLogin.Size = new System.Drawing.Size(80, 28);
@@ -543,10 +555,10 @@
             // 
             // MainEditor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 23F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.ClientSize = new System.Drawing.Size(1000, 680);
             this.Controls.Add(this.EditorWindowContent);
             this.Controls.Add(this.WindowTitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -584,7 +596,7 @@
         private CustomControls.ToolbarImageButton toolbarBtnLoad;
         private CustomControls.ToolbarImageButton toolbarBtnExport;
         private CustomControls.ToolbarImageButton toolbarBtnSave;
-        private CustomControls.ToolbarImageButton toolbarImageButton2;
+        private CustomControls.ToolbarImageButton toolbarBtnHelp;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
         private CustomControls.RoundedPanel roundedPanel2;

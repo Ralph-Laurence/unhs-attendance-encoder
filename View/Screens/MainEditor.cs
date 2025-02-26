@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CsvHelper;
@@ -25,7 +26,7 @@ namespace UNHS_Attendance_Encoder_Net48
         private Dictionary<string, AttendanceItem> attendanceItems;
 
         private int currentlySelectedRowIdx = -1;
-        private string currentRowKey = string.Empty;
+        // private string currentRowKey = string.Empty;
         private bool isRemovingRow = false; // Flag to track row removal
 
         public MainEditor(Form initiator)
@@ -99,7 +100,7 @@ namespace UNHS_Attendance_Encoder_Net48
                 return;
 
             var rowKey = ShortGuid.Make();
-            currentRowKey = rowKey;
+            // currentRowKey = rowKey;
             attendanceItems.Add(rowKey, attendanceItem);
 
             // Grab the new row!
@@ -126,8 +127,11 @@ namespace UNHS_Attendance_Encoder_Net48
             }
 
             DataGridViewRow row = dataGridView1.Rows[currentlySelectedRowIdx];
-            attendanceItems[currentRowKey] = attendanceItem;
-            SetRowData(row, attendanceItem, currentRowKey);
+            var rowKey = row.Cells[dataGridView1.Columns["RowKey"].Index].Value.ToString();
+
+            attendanceItems[rowKey] = attendanceItem;
+            SetRowData(row, attendanceItem, rowKey);
+            // MessageBox.Show($"Row Key: {rowKey}");
         }
 
         private void SetRowData(DataGridViewRow row, AttendanceItem attendanceItem, string rowKey = "")
@@ -221,7 +225,7 @@ namespace UNHS_Attendance_Encoder_Net48
                 dataGridView1.Rows.Clear();
                 attendanceItems.Clear();
                 currentlySelectedRowIdx = -1;
-                currentRowKey = string.Empty;
+                //currentRowKey = string.Empty;
                 Alert.Info("The table has been cleared.");
             });
         }
@@ -250,7 +254,7 @@ namespace UNHS_Attendance_Encoder_Net48
 
                     // Optionally, reset the cached index
                     currentlySelectedRowIdx = -1; // Or any default value indicating no selection
-                    currentRowKey = string.Empty;
+                    //currentRowKey = string.Empty;
                     dataGridView1.ClearSelection();
 
                     // Re-enable SelectionChanged event
@@ -300,8 +304,10 @@ namespace UNHS_Attendance_Encoder_Net48
 
                         var data = edit.AttendanceData;
                         UpdateAttendanceRowData(data);
+                        // MessageBox.Show($"Row Key: {rowKey}");
                     };
                     edit.ShowDialog();
+                    // MessageBox.Show($"Send Row Key: {rowKey}");
                 }
             }
             else
@@ -469,7 +475,7 @@ namespace UNHS_Attendance_Encoder_Net48
 
             attendanceItems.Clear();
             currentlySelectedRowIdx = -1;
-            currentRowKey = string.Empty;
+            //currentRowKey = string.Empty;
             isRemovingRow = false;
             dataGridView1.Rows.Clear();
         }
@@ -485,6 +491,80 @@ namespace UNHS_Attendance_Encoder_Net48
             }
 
             Alert.Info($"Project state has been successfully saved. You may continue editing.", "Project Saved");
+        }
+
+        private void toolbarBtnLoad_Click(object sender, EventArgs e)
+        {
+            var projectBrowser = new ProjectBrowser();
+            var result = projectBrowser.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                // Access the selected project name
+                string projectName = projectBrowser.ProjectName;
+                
+                var load = ProjectFile.Load(projectName);
+
+                if (load == null)
+                {
+                    Alert.Danger("Sorry, we're unable to load the project due to a technical error. Please try again later.");
+                    return;
+                }
+
+                ResetEditor();
+
+                foreach (KeyValuePair<string, AttendanceItem> kvp in load)
+                {
+                    var attendanceItem = kvp.Value;
+                    var rowKey = kvp.Key;
+
+                    // Grab the new row!
+                    DataGridViewRow row = new DataGridViewRow
+                    {
+                        Height = 30
+                    };
+
+                    row.CreateCells(dataGridView1);
+                    SetRowData(row, attendanceItem, rowKey);
+
+                    dataGridView1.Rows.Add(row);
+                }
+
+                attendanceItems = load;
+                SetProjectTitle(projectName);
+                Alert.Info($"Project {projectName} has been successfully loaded. You may now continue where you left off.", "Project Loaded");
+            }
+            else
+            {
+                Alert.Info("No project selected.");
+            }
+        }
+
+        private void toolbarBtnHelp_Click(object sender, EventArgs e)
+        {
+            var help = new View.Modals.Help();
+            help.ShowDialog();
+        }
+
+        // Import the necessary WinAPI functions
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        // Constants
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        // Handle the MouseDown event to drag the form
+        private void WindowTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
     }
 }

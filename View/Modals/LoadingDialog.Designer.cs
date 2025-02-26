@@ -102,7 +102,7 @@
             // LoadingDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 23F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(56)))));
             this.ClientSize = new System.Drawing.Size(300, 170);
             this.Controls.Add(this.panel1);
